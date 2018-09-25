@@ -1,11 +1,9 @@
 var MakeCircleDancer = function(top, left, timeBetweenSteps){
   MakeDancer.call(this, top, left, timeBetweenSteps);
+  this.$node = $('<span class="dancer"></span>');
   this.step();
-  this.counter = 0;
-  // this.leftCounter = 0;
-  // this.rightCounter = 0;
-  // this.downCounter = 0;
-  // this.upCounter = 0;
+  this.counter = 1;
+  this.timeBetweenSteps = Math.random() * 50;
 };
 
 MakeCircleDancer.prototype = Object.create(MakeDancer.prototype);
@@ -13,37 +11,26 @@ MakeCircleDancer.prototype.constructor = MakeCircleDancer;
 
 MakeCircleDancer.prototype.step = function(){
   MakeDancer.prototype.step.call(this);
-  //move position
 
-  /*
-  */
-  let randomInt = Math.random() * 100;
-  console.log(typeof this.top)
-  if (this.counter <= 500) {
-    this.top = this.top ** 2;
-    this.left = this.left ** 2;
-    this.counter += 100;
+  if (this.counter >= 0 && this.counter < 1) {
+    this.left -= 10;
+    this.counter += 0.1;
+  } else if (this.counter >= 1 && this.counter < 2) {
+    this.top -= 10;
+    this.counter += 0.1;
+  } else if (this.counter >= 2 && this.counter < 3) {
+    this.left += 10;
+    this.counter += 0.1;
+  } else if (this.counter >= 3 && this.counter < 4) {
+    this.top += 10;
+    this.counter += 0.1;
   } else {
-    this.top = this.top - 1;
-    this.left = this.left - 1;
-    this.counter -= 100;
+    this.counter = 0;
   }
-
-  // if(this.rightCounter <= 500){
-  //   this.left = this.left + 1;
-  //   this.rightCounter += 100;
-  // } else if(this.downCounter <= 500){
-  //   this.top = this.top - 1;
-  //   this.downCounter += 100;
-  // } else if(this.leftCounter <= 500){
-  //   this.left = this.top - 1;
-  //   this.leftCounter += 100;
-  // } else if(this.upCounter <= 500){
-  //   this.top = this.top + 1;
-  //   this.upCounter += 100;
-  // } 
-
-
+  
   this.setPosition(this.top, this.left);
 }
 
+MakeCircleDancer.prototype.lineUp = function(x) {
+  this.setPosition(700, x);
+};

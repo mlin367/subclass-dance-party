@@ -2,7 +2,7 @@ var MakeCircleDancer = function(top, left, timeBetweenSteps){
   MakeDancer.call(this, top, left, timeBetweenSteps);
   this.$node = $('<span class="dancer"></span>');
   this.step();
-  this.counter = 1;
+  this.counter = 0;
   this.timeBetweenSteps = Math.random() * 50;
 };
 
@@ -27,6 +27,7 @@ MakeCircleDancer.prototype.step = function(){
   } else {
     this.counter = 0;
   }
+  console.log(this.left)
   
   this.setPosition(this.top, this.left);
 }

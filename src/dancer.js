@@ -38,8 +38,8 @@ var MakeDancer = function(top, left, timeBetweenSteps){
 };
 
 MakeDancer.prototype.step = function(){
-  
-  setTimeout(this.step, this.timeBetweenSteps);
+  var context = this;
+  setTimeout(function(){context.step()}, this.timeBetweenSteps);
 };
 
 MakeDancer.prototype.setPosition = function(top, left){

@@ -25,9 +25,14 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
-/* .squareDancer{
-  border:10px solid purple;
-  width: 10px;
-  height: 10px;
+
+.squareDancer{
+  background-color: yellow;
+  border: 7px solid purple;
+  width: 15px;
+  height: 15px;
   position: absolute;
-} */
+}
+
+
+

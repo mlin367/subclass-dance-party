@@ -19,6 +19,7 @@
 // };
 var MakeBlinkyDancer = function(top, left, timeBetweenSteps){
   MakeDancer.call(this, top, left, timeBetweenSteps);
+  this.$node.append('<img id="theImg" src="http://gifdanceparty.giphy.com/assets/dancers/cowboy.gif" />')
   this.step();
 };
 
@@ -27,9 +28,10 @@ MakeBlinkyDancer.prototype.constructor = MakeBlinkyDancer;
 
 MakeBlinkyDancer.prototype.step = function(){
   MakeDancer.prototype.step.call(this);
+  this.$node.css('border', '0px');
   this.$node.toggle();
 }
 
 MakeBlinkyDancer.prototype.lineUp = function(x) {
-  this.setPosition(700, x);
+  this.setPosition(650, x);
 };

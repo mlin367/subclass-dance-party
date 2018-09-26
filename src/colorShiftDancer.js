@@ -32,6 +32,7 @@ MakeColorShiftDancer.prototype.lineUp = function(x) {
 
 MakeColorShiftDancer.prototype.stopColorShift = function() {
   this.colorShift = !this.colorShift;
+  console.log(this.colorShift)
 }
 
 

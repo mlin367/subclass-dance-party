@@ -32,22 +32,26 @@ $(document).ready(function() {
     
     $('body').append(dancer.$node);
 
+
     if (dancer.constructor.name === 'MakeColorShiftDancer') {
       $('.event').append(dancer.$node);
     }
 
-    $('.event').on('mouseover', '.mouseover', function(event) {
+
+    $('.event').mouseenter(function(){
       dancer.stopColorShift();
-    })
+    }).mouseleave( function(){
+      dancer.stopColorShift();
+      dancer.step();
+    } );
+
     
   });
 
   $('.addLineButton').on('click', function(event) {
     window.dancers.forEach((dancer, index) => {
       dancer.lineUp(index * 30);
-    })
+    });
   });
-  
-
 });
 

@@ -1,5 +1,6 @@
 body, html{
   height:100%;
+  background-image: url('src/white-room-16.jpg');
 }
 body{
   margin: 0px;

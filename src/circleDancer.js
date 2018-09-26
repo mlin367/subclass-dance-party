@@ -1,11 +1,6 @@
 var MakeCircleDancer = function(top, left, timeBetweenSteps){
   MakeDancer.call(this, top, left, timeBetweenSteps);
-<<<<<<< HEAD
   this.$node = $('<span class="squareDancer"></span>');
-=======
-  this.$node = $('<span class="dancer"></span>');
-  this.step();
->>>>>>> 0524b2be867016298347e1ad9310fd4885a138a4
   this.counter = 0;
   this.timeBetweenSteps = Math.random() * 50;
   this.move = true;
@@ -39,12 +34,6 @@ MakeCircleDancer.prototype.step = function(){
     
     this.setPosition(this.top, this.left);
   }
-<<<<<<< HEAD
-=======
-  console.log(this.left)
-  
-  this.setPosition(this.top, this.left);
->>>>>>> 0524b2be867016298347e1ad9310fd4885a138a4
 }
 
 MakeCircleDancer.prototype.lineUp = function(x) {

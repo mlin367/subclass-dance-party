@@ -19,7 +19,7 @@
 // };
 var MakeBlinkyDancer = function(top, left, timeBetweenSteps){
   MakeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node.append('<img id="theImg" src="http://gifdanceparty.giphy.com/assets/dancers/cowboy.gif" />')
+  this.$node.append('<img id="theImg" src="src/cowboy45.gif" />');
   this.step();
 };
 
